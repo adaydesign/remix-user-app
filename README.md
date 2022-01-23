@@ -51,3 +51,25 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+# Database Configuration
+
+## Prisma
+
+Make sure you already install prisma and @prisma/client into your project.
+
+### Database Url
+
+in .env file
+
+```
+DATABASE_URL="mysql://username:password@localhost:3306/users_app"
+```
+
+* users_app is database name
+
+### Migrate database
+
+```
+npx prisma migrate dev --name init
+```
